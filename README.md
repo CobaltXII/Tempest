@@ -3,6 +3,7 @@
 A terrain editor written in C++11 using OpenGL.
 
 ![Alt text](https://github.com/CobaltXII/Tempest/blob/master/screenshot_1.png?raw=true)
+![Alt text](https://github.com/CobaltXII/Tempest/blob/master/screenshot_2.png?raw=true)
 
 # Abstract
 
