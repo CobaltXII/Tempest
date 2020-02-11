@@ -8,6 +8,8 @@ struct WaterShader: Shader {
 	GLuint uView;
 	GLuint uLightDirection;
 	GLuint uLightColor;
+	GLuint uFogDensity;
+	GLuint uFogGradient;
 	GLuint uCamera;
 	GLuint uReflectionTexture;
 	GLuint uRefractionTexture;
@@ -38,6 +40,8 @@ struct WaterShader: Shader {
 		LOAD_UNIFORM(uView);
 		LOAD_UNIFORM(uLightDirection);
 		LOAD_UNIFORM(uLightColor);
+		LOAD_UNIFORM(uFogDensity);
+		LOAD_UNIFORM(uFogGradient);
 		LOAD_UNIFORM(uCamera);
 		LOAD_UNIFORM(uReflectionTexture);
 		LOAD_UNIFORM(uRefractionTexture);
@@ -91,5 +95,11 @@ struct WaterShader: Shader {
 		setUniformFloat(uWaterSpecularity, specularity);
 		setUniformVec4(uWaterColor, color);
 		setUniformVec3(uWaterMurky, murky);
+	}
+
+	// Set the fog.
+	void setFog(float fogDensity, float fogGradient) {
+		setUniformFloat(uFogDensity, fogDensity);
+		setUniformFloat(uFogGradient, fogGradient);
 	}
 };

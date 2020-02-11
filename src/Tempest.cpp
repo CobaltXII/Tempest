@@ -498,6 +498,10 @@ int main() {
 					terrainShader.enable();
 					terrainShader.setFog(fogDensity / 10.0f, fogGradient);
 					terrainShader.disable();
+
+					waterShader.enable();
+					waterShader.setFog(fogDensity / 10.0f, fogGradient);
+					waterShader.disable();
 				}
 
 				// Filter settings.
