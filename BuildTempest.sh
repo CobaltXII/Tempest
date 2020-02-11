@@ -9,4 +9,4 @@ bin/imgui_draw.o \
 bin/imgui_widgets.o \
 bin/imgui_impl_sdl.o \
 bin/imgui_impl_opengl3.o \
--o Tempest.o -Wall `sdl2-config --cflags --libs` -framework OpenGL -framework Cocoa && ./Tempest.o
+-o Tempest.o -Wall `sdl2-config --cflags --libs` -framework OpenGL -framework Cocoa -O3 && ./Tempest.o
